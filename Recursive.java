@@ -1,6 +1,6 @@
 public class Recursive {
 
-
+// this is a comment
     public static void printHello() {
         System.out.println("Hello");
         printHello();
