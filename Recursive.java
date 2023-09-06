@@ -107,6 +107,34 @@ public class Recursive {
 
 
     }
+    /**
+     * Binary Search
+     * @param arr - array we are looking through
+     * @param low - beginning of search area (index)
+     * @param high - end of search area (index)
+     * @param x - number we are looking for
+     * @return - location of x
+     */
+    public static int binarySearch(int[] arr, int low, int high, int x) {
+        if (high >= low)  { // valid search area
+            int mid = (low + high)/2;
+
+            // compare x to the element at mid
+            if (arr[mid] == x) // found the element, hurray!
+                return mid;
+            else if (x < array[mid]) {// element is the first half
+                high = mid - 1;
+                return binarySearch(arr, low, high, x);
+            }
+            else  { // element is in the second half of the array
+                low = mid + 1;
+                return binarySearch(arr, low, high, x);
+            }
+        }
+
+        return -1; // element not found
+    }
+
     public static void main(String[] args) {
         System.out.println(max());
     }
