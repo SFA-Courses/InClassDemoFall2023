@@ -30,7 +30,7 @@ public class FavoriteList extends ListADT<Favorite> {
         if (index < 0  || index > this.size())
             throw new ListException("Index " + index + " is invalid for a list of size: " + this.size());
         
-        if (index  >= MAX_FAVORITES)
+        if (this.size()  >= MAX_FAVORITES)
             throw new ListException("Index exceeds the maximum allowed size of the list: " + MAX_FAVORITES);
 
         for (int i = this.size(); i > index;  i--) {
