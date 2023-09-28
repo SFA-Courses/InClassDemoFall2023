@@ -2,13 +2,14 @@ public class TestFriendsList {
     public static void main(String[] args) {
         FriendsList friendsList = new FriendsList();
         System.out.println("Testing Add: ");
-        friendsList.add(2, new Friend("sktls", false));
+        friendsList.add(0, new Friend("sktls", false));
         friendsList.add(0, new Friend("DorianALP", true));
         Friend a = new Friend("GothBarbie", false);
-        friendsList.add(0, a);
+      //  friendsList.add(0, a);
         friendsList.add(0, a);
         friendsList.add(0, a);
         System.out.println(friendsList.toString());
+        System.out.println("List size: " + friendsList.size());
 
         System.out.println();
         System.out.println("Testing Remove: ");

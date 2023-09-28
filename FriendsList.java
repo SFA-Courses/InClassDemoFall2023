@@ -17,6 +17,23 @@ public class FriendsList extends ListADT<Friend> {
     @Override
     public int size() {
         return this.numFriends;
+        //return this.getSize(this.head);
+        /* 
+        int num = 0;
+        Node<Friend> current = this.head;
+        while (current != null) {
+            current = current.getNext(); // moves to the next 
+            num++;
+        }
+        return num;
+        */
+    }
+
+    public int getSize(Node<Friend> node) {
+        if (node == null) 
+            return 0;
+        else 
+            return 1 + this.getSize(node.getNext());
     }
 
     @Override

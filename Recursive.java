@@ -135,7 +135,15 @@ public class Recursive {
         return -1; // element not found
     }
 
+    private static int madeUp(int n) {
+        if (n == 1)
+            return -3;        
+        else 
+            return madeUp(n-1) * madeUp(n-1) + 4;
+    }
+
     public static void main(String[] args) {
-        System.out.println(max());
+        //System.out.println(max());
+        System.out.println(madeUp(4));
     }
 }
