@@ -1,6 +1,6 @@
 public class TestStack {
     public static void main(String[] args) {
-        StackArrayBased<Character> stack = new StackArrayBased<Character>();
+        StackReferenceBased<Character> stack = new StackReferenceBased<Character>();
 
         System.out.println("Test isEmpty: ");
         System.out.println(stack.isEmpty());

@@ -62,7 +62,14 @@ public class StringReverser extends JFrame {
     private String reverse(String text) {
         StackReferenceBased<Character> stack = new StackReferenceBased<Character>();
 
-        // TODO: Add code here
-        return "";
+        //pushes all the letters on the stack
+        for (int i = 0; i < text.length(); i++)
+            stack.push(text.charAt(i));
+
+        String r = "";
+        while (!stack.isEmpty())
+            r += stack.pop();
+
+        return r;
     }
 }
