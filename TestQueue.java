@@ -1,6 +1,6 @@
 public class TestQueue {
     public static void main(String[] args) {
-        QueueArrayBased<Integer> queue = new QueueArrayBased<Integer>();
+        QueueCircular<Integer> queue = new QueueCircular<Integer>();
         System.out.println("Test isEmpty: " + queue.isEmpty());
         System.out.println();
 
